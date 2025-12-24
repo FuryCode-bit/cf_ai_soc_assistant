@@ -150,5 +150,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [license-shield]: https://img.shields.io/github/license/FuryCode-bit/cf_ai_soc_assistant.svg?style=for-the-badge
 [license-url]: https://github.com/FuryCode-bit/cf_ai_soc_assistant/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/FuryCode-bit
+[linkedin-url]: https://linkedin.com/in/bernardeswebdev
 [project-screenshot]: readme/dashboard_preview.png
