@@ -1,0 +1,38 @@
+.incident-sidebar {
+  width: 320px;
+  background: #fff;
+  border-right: 1px solid var(--siem-border);
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 15px;
+  font-weight: bold;
+  background: var(--siem-dark);
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.incident-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.incident-item:hover { background: #f9fafb; }
+.incident-item.active { background: #e0f2fe; border-left: 4px solid var(--siem-blue); }
+
+.severity-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.high .severity-indicator { background: var(--high); }
+.critical .severity-indicator { background: var(--critical); }

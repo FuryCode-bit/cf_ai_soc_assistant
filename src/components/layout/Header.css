@@ -1,0 +1,39 @@
+.siem-header {
+  height: 60px;
+  background-color: var(--siem-dark);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 2px solid var(--siem-blue);
+}
+
+.header-left { display: flex; align-items: center; gap: 15px; }
+
+.siem-logo {
+  background: var(--siem-blue);
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.siem-header h1 { font-size: 1rem; margin: 0; font-weight: 500; }
+
+.version { color: #888; font-size: 0.7rem; margin-left: 10px; }
+
+.simulate-btn {
+  background: transparent;
+  border: 1px solid #555;
+  color: #ccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.simulate-btn:hover {
+  background: #334155;
+  color: white;
+  border-color: var(--siem-blue);
+}
