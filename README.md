@@ -15,7 +15,7 @@
   <h3 align="center">ShieldGPT: AI-Powered SOC Assistant</h3>
 
   <p align="center">
-    Triaging SIEM alerts with Llama 3.1 and orchestrating incident remediation on the Cloudflare developer platform.
+    Triaging SIEM alerts with Llama 3.1 and orchestrating incident remediation using Cloudflare Workers.
     <br />
     <a href="#architecture-flow"><strong>Explore the Architecture »</strong></a>
     <br />
