@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8787';
+const BASE_URL = import.meta.env.VITE_API_URL;
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 export const api = {
@@ -32,7 +32,7 @@ export const api = {
     return res.json();
   },
 
-  // NEW: Added the remediate call with auth
+  // Remediate call
   remediate: async (incidentId) => {
     const res = await fetch(`${BASE_URL}/api/remediate/${incidentId}`, {
       method: 'POST',

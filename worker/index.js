@@ -19,7 +19,15 @@ export class IncidentRoom extends DurableObject {
 
   async performTriage() {
     const alertData = await this.ctx.storage.get("alert");
-    const prompt = `Analyze this security alert and provide remediation steps: ${JSON.stringify(alertData)}`;
+    const prompt = `
+      You are a senior SOC analyst. Your job is to analyze the following JSON security alert and provide a summary of what is happening and the likely root cause and affected resources. In the end, provide a step-by-step remediation guide to solve the problem. Follow this rules:
+
+      Rules:
+      - If data is missing, say what additional information is needed instead of guessing.
+      - Be concise and actionable.
+
+      Alert:: ${JSON.stringify(alertData)}
+    `;
     return await this.chat(prompt);
   }
 
@@ -44,7 +52,8 @@ export class IncidentRoom extends DurableObject {
     let history = await this.ctx.storage.get("history") || [];
     const systemPrompt = {
       role: "system",
-      content: `You are a SOC Expert investigating: ${JSON.stringify(alertData)}.`
+      content: `You are a SOC analyst, acting as a senior security analyst investigating the current incident: ${JSON.stringify(alertData)}. 
+      Help the user investigate, contain, and resolve this specific alert.`
     };
     history.push({ role: "user", content: userMessage });
     const aiResponse = await this.env.AI.run("@cf/meta/llama-3.1-8b-instruct", {
